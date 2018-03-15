@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container {
+            width: 200px;
+        }
+
+        .one-line-text {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .multi-line-text {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="one-line-text">
+        Here is one line text. Here is one line text. Here is one line text. Here is one line text.
+    </div>
+    <div class="multi-line-text">
+        Here is multi line text. Here is multi line text. Here is multi line text. Here is multi line text.
+    </div>
+    <a href="http://www.css88.com/archives/5206">
+        更全面的教程
+    </a>
+</div>
+</body>
+</html>
