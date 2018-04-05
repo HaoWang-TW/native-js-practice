@@ -32,7 +32,7 @@ describe('JSON.parse', () => {
       return value;
     });
     expect(obj.age).toBe(14);
-  })
+  });
 });
 
 

@@ -12,10 +12,13 @@ describe('test regExp', () => {
     const testString = 'aaabbbcccdddeeeaaabbccaaa';
     let allMatched = [];
     let matched;
-    while (matched = re.exec(testString)) {
-      allMatched.push(matched);
-      expect(matched.input).toBe(testString);
-    }
+    do {
+      matched = re.exec(testString);
+      if(matched) {
+        allMatched.push(matched);
+      }
+    } while(matched);
+
     expect(allMatched.length).toBe(3);
   });
 

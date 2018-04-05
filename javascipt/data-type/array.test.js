@@ -12,4 +12,4 @@ describe('array', () => {
     expect(a.length).toBe(3);
     expect(a[1]).toBeUndefined();
   });
-})
+});

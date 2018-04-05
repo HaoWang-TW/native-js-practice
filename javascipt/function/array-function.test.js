@@ -2,7 +2,7 @@ describe('array function', () => {
   let obj = {
     a: 1,
     getA() {
-      return this.a
+      return this.a;
     },
     getAByArrayFunction: () => this.a
   };

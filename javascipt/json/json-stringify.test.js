@@ -44,6 +44,6 @@ describe('JSON.stringify', () => {
     const expectStr = `{
 	"name": "wang"
 }`;
-    expect(JSON.stringify(obj, ['name'], '\t')).toBe(expectStr)
+    expect(JSON.stringify(obj, ['name'], '\t')).toBe(expectStr);
   });
 });

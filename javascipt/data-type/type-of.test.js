@@ -6,5 +6,6 @@ describe('type of', () => {
     expect(typeof false).toBe('boolean');
     expect(typeof new Boolean(1)).toBe('object');
     expect(typeof []).toBe('object');
+    expect(typeof NaN).toBe('number');
   });
 });
