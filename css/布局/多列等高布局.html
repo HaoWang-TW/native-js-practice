@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container-01{
+            display: flex;
+            justify-content: stretch;
+        }
+        .container div {
+            border: 1px solid red;
+            width: 400px;
+        }
+        .container-01 div:nth-child(2n) {
+            background-color: #eee;
+        }
+        .container-02 {
+            height: 100px;
+            width: 100%;
+        }
+        .container-02 td {
+            border: 1px solid green;
+        }
+    </style>
+</head>
+<body>
+<h1>多列等高布局</h1>
+<div class="container container-01">
+    <div class="colum-01">1 a sv s</div>
+    <div class="colum-02">2</div>
+    <div class="colum-03">3</div>
+    <div class="colum-04">4</div>
+</div>
+
+<table class="container-02">
+    <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+    </tr>
+</table>
+</body>
+</html>

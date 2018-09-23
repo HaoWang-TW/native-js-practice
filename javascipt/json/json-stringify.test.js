@@ -3,16 +3,14 @@ describe('JSON.stringify', () => {
     name: 'wang',
     age: 23,
   };
-  test('should stringify number', () => {
-    expect(JSON.stringify(1)).toBe('1');
-  });
 
   test('should stringify number', () => {
-    expect(JSON.stringify(1)).toBe('1');
+    expect(JSON.stringify(1)).toBe();
   });
 
+
   test('should stringify number', () => {
-    expect(JSON.stringify('string')).toBe('"string"');
+    expect(JSON.stringify('string')).toBe();
   });
 
   test('should not contain undefined fields', () => {
@@ -20,10 +18,10 @@ describe('JSON.stringify', () => {
       name: 'wang',
       age: undefined,
     };
-    expect(JSON.stringify(objWithUndefinedProperty).indexOf('age')).toBe(-1);
+    expect(JSON.stringify(objWithUndefinedProperty).indexOf('age')).toBe();
   });
   test('can use an array replacer', () => {
-    expect(JSON.stringify(obj, ['name']).indexOf('age')).toBe(-1);
+    expect(JSON.stringify(obj, ['name']).indexOf('age')).toBe();
   });
 
   test('can use replacer', () => {
@@ -37,7 +35,7 @@ describe('JSON.stringify', () => {
       }
       return undefined;
     });
-    expect(jsonString).toBe(undefined);
+    expect(jsonString).toBe();
   });
 
   test('can set space', () => {

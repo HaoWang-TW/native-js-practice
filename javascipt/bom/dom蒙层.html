@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red {
+            border: 1px solid red;
+            width: 30%;
+            height: 500px
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="red"></div>
+</div>
+<script>
+    function addModal(selector) {
+        let target = document.querySelector(selector)
+
+        let layer = document.createElement('div')
+        if(target.style.position === '' || target.style.position === 'static') {
+            target.style.position = 'relative'
+        }
+        layer.style.backgroundColor = 'rgba(0, 0, 0, .5)'
+        layer.style.height = '100%'
+        layer.style.width = '100%'
+        layer.style.position = 'absolute'
+        layer.style.top = 0
+        layer.style.left = 0
+        target.appendChild(layer)
+
+    }
+    addModal('.red')
+</script>
+</body>
+</html>

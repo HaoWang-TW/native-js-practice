@@ -3,24 +3,24 @@
  */
 describe('JSON.parse', () => {
   test('should return null when parse null', () => {
-    expect(JSON.parse(null)).toBeNull();
+    expect(JSON.parse(null)).toBe();
   });
 
   test('should throw SyntaxError when parse empty string', () => {
-    expect(() => JSON.parse('')).toThrowError(SyntaxError);
+    expect(() => JSON.parse(''));
   });
 
   test('should return empty string when parse \'""\'', () => {
-    expect(JSON.parse('""')).toBe('');
+    expect(JSON.parse('""')).toBe();
   });
 
   test('should return empty string when parse undefined ', () => {
-    expect(() => JSON.parse(undefined)).toThrowError(SyntaxError);
+    expect(() => JSON.parse(undefined)).toThrowError();
   });
 
   test('should throw syntaxError when meet trailing comma', () => {
-    expect(() => JSON.parse('[1, 2, 3,]')).toThrowError(SyntaxError);
-    expect(() => JSON.parse('{"age": 23, }')).toThrowError(SyntaxError);
+    expect(() => JSON.parse('[1, 2, 3,]')).toThrowError();
+    expect(() => JSON.parse('{"age": 23, }')).toThrowError();
   });
 
   test('can use receiver parameter to filter', () => {
@@ -31,7 +31,7 @@ describe('JSON.parse', () => {
       }
       return value;
     });
-    expect(obj.age).toBe(14);
+    expect(obj.age).toBe();
   });
 });
 

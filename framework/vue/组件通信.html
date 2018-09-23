@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    {{count}}
+    <counter v-on:add-one="count++"></counter>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+    Vue.component('counter', {
+        template: '<button @click="addOne">add one</button>',
+        methods: {
+            addOne() {
+                this.$emit('add-one')
+            }
+        }
+    })
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                count: 10
+            }
+        }
+    })
+</script>
+</body>
+</html>
