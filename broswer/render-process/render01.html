@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<h1>xxxxDDD </h1>
+<p>遇到script标签，浏览器DOM解析会暂停，直到script执行完成</p>
+<p>使用async能避免这个问题</p>
+<script>
+    console.log(document.querySelectorAll('h1').length) // 1
+</script>
+<script src="async.js" async>
+</script>
+<h1>xxxx eee</h1>
+
+</body>
+</html>
